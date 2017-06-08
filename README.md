@@ -2,7 +2,8 @@
 #### Descrição  
 Aplicativo que permitirá maior agilidade e controle da frequência de alunos.
 #### Colaboradores
-[Eliézer de Jesus](https://github.com/eliezerdejj)
+[Eliézer de Jesus](https://github.com/eliezerdejj)  
+
 [Igor Queiroz](https://github.com/igorqsilva)
 
 #### Links

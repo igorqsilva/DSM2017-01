@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Document xmlns="http://www.evolus.vn/Namespace/Pencil"><Properties/><Pages><Page><Properties><Property name="name">Untitled Page</Property><Property name="id">1496876523474_2577</Property><Property name="width">1016</Property><Property name="height">542</Property><Property name="dimBackground"/><Property name="transparentBackground"/><Property name="backgroundColor">#ffffff</Property></Properties><Content><g xmlns="http://www.w3.org/2000/svg" p:type="Shape" xmlns:p="http://www.evolus.vn/Namespace/Pencil" p:def="Evolus.Common:Bitmap" id="130514e81bc5423382841bc861b47492" transform="matrix(1,0,0,1,53,-4)"><p:metadata><p:property name="box"><![CDATA[289,565]]></p:property><p:property name="imageData"><![CDATA[1047,2048,prot1.png]]></p:property><p:property name="withBlur"><![CDATA[false]]></p:property><p:property name="fillColor"><![CDATA[#FFFFFF00]]></p:property><p:property name="strokeColor"><![CDATA[#000000FF]]></p:property><p:property name="strokeStyle"><![CDATA[0|]]></p:property></p:metadata>
+            <defs>
+                <filter height="1.2558399" y="-0.12792" width="1.06396" x="-0.03198" p:name="imageShading" id="564e47e9fa834701acb5f4f1c5afafa5">
+                    <feGaussianBlur stdDeviation="1.3325" in="SourceAlpha"/>
+                </filter>
+                <g p:name="container" id="8eb63eb531784a1189b1acf958b6cacd">
+                    <rect style="fill: rgb(255, 255, 255); stroke: rgb(0, 0, 0); stroke-opacity: 1; stroke-width: 0; fill-opacity: 0;" p:name="bgRect" id="97a20e835f4749faa373c96f0b59c1a1" width="289" height="565" transform="translate(0,0)"/>
+                    <g p:name="imageContainer" id="0d9d2586c1f340dab1ce1d2bc5ec6969" transform="scale(0.27602674307545366,0.27587890625)">
+                        <image x="0" y="0" p:name="image" id="db5a4420f18a4d26b5cab2229f6bc67f" xlink:href="prot1.png" xmlns:xlink="http://www.w3.org/1999/xlink" width="1047" height="2048"/>
+                    </g>
+                </g>
+            </defs>
+            <use xlink:href="#8eb63eb531784a1189b1acf958b6cacd" xmlns:xlink="http://www.w3.org/1999/xlink" transform="translate(1, 1)" p:filter="url(#564e47e9fa834701acb5f4f1c5afafa5)" style="opacity: 0.6; visibility: hidden; display: none;" p:name="bgCopy" id="2cd9606d8cd7489c9b98af16913dd6ed"/>
+            <use xlink:href="#8eb63eb531784a1189b1acf958b6cacd" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        </g></Content></Page></Pages></Document>

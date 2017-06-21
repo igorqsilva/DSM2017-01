@@ -10,79 +10,150 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cadastrar Nova Turma"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Nome da Turma"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintVertical_bias="0.103"
+        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.041" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintVertical_bias="0.114"
         android:id="@+id/editText"/>
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Dias de Aula"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintVertical_bias="0.203"
+        app:layout_constraintVertical_bias="0.348"
+        app:layout_constraintHorizontal_bias="0.039" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintVertical_bias="0.264"
         android:id="@+id/editText2"/>
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="18dp"
         android:text="Horario de Aulas"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintVertical_bias="0.303"
+        app:layout_constraintVertical_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.058"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintVertical_bias="0.412"
         android:id="@+id/editText3"/>
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Chave de Acesso"
+        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintVertical_bias="0.403"
-        android:id="@+id/editText4"/>
+        app:layout_constraintVertical_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.044" />
 
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="Localização"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.119"
-        app:layout_constraintVertical_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintVertical_bias="0.559"
+        android:id="@+id/editText4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localização"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.624"
+        app:layout_constraintHorizontal_bias="0.036" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintVertical_bias="0.707"
         android:id="@+id/editText5"/>
 
     <Button
-        android:layout_width="120dp"
-        android:layout_height="48dp"
-        android:text="Cadastrar"
-        tools:layout_editor_absoluteY="330dp"
-        tools:layout_editor_absoluteX="132dp"
-        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:onClick="cadastrar"
+        android:gravity="bottom"
+        android:text="@string/app_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="376dp"
+        app:layout_constraintHorizontal_bias="0.45" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        app:layout_constraintHorizontal_bias="0.052" />
 
 </android.support.constraint.ConstraintLayout>

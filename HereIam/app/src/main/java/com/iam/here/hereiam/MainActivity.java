@@ -3,7 +3,10 @@ package com.iam.here.hereiam;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+<<<<<<< HEAD
 import android.database.SQLException;
+=======
+>>>>>>> master
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -13,8 +16,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import java.sql.Date;
 
+=======
+>>>>>>> master
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -69,7 +75,11 @@ public class MainActivity extends AppCompatActivity {
      * Tabela de turma ficará armazenada as turmas criadas pelo professor
      * Cria o Banco de Dados
      */
+<<<<<<< HEAD
     public class Banco extends SQLiteOpenHelper{
+=======
+    public class Banco extends SQLiteOpenHelper {
+>>>>>>> master
         private static final String Nome_Banco = "banco.db";
         private static final String Tabela_turmas = "turmas";
         private static final String ID = "_id";
@@ -169,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
      * O metodo insereDados passa por parametro as informações que serão adicionadas
      * Ao final da operação será exibito uma mesagem (Toast) mostrando se a operação foi realizada com sucesso ou não
      */
+<<<<<<< HEAD
     public class InsereDado extends Activity{
 
         @Override
@@ -177,16 +188,34 @@ public class MainActivity extends AppCompatActivity {
            setContentView(R.layout.activity_main);
 
             Button botao = (Button)findViewById(R.id.all);
+=======
+    public class InsereDado extends Activity {
+
+        @Override
+        protected void onCreate(Bundle saveInstanceState){
+            super.onCreate(saveInstanceState);
+            setContentView(R.layout.activity_main);
+
+            Button botao = (Button)findViewById(R.id.button);
+>>>>>>> master
 
             botao.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     BancoController crud = new BancoController(getBaseContext());
+<<<<<<< HEAD
                     EditText NomeTurma = (EditText)findViewById(R.id.editText);
                     EditText diaAula = (EditText)findViewById(R.id.editText2);
                     EditText horario = (EditText)findViewById(R.id.editText3);
                     EditText chaveAcesso = (EditText)findViewById(R.id.editText4);
                     EditText local = (EditText)findViewById(R.id.editText5);
+=======
+                    EditText NomeTurma = (EditText) findViewById(R.id.editText);
+                    EditText diaAula = (EditText) findViewById(R.id.editText2);
+                    EditText horario = (EditText) findViewById(R.id.editText3);
+                    EditText chaveAcesso = (EditText) findViewById(R.id.editText4);
+                    EditText local = (EditText) findViewById(R.id.editText5);
+>>>>>>> master
                     String NomeTurmaString = NomeTurma.getText().toString();
                     String diaAulaString = diaAula.getText().toString();
                     String horarioString = horario.getText().toString();
@@ -194,13 +223,22 @@ public class MainActivity extends AppCompatActivity {
                     String localString = local.getText().toString();
                     String resultado;
 
+<<<<<<< HEAD
                     resultado = crud.insereDado(NomeTurmaString,diaAulaString,horarioString,chaveAcessoString,localString);
 
                     Toast.makeText(getApplicationContext(),resultado, Toast.LENGTH_LONG).show();
+=======
+                    resultado = crud.insereDado(NomeTurmaString, diaAulaString, horarioString, chaveAcessoString, localString);
+
+                    Toast.makeText(getApplicationContext(), resultado, Toast.LENGTH_LONG).show();
+>>>>>>> master
                 }
 
             });
         }
     }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> master

@@ -134,6 +134,7 @@
         android:id="@+id/editText5"/>
 
     <Button
+<<<<<<< HEAD
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:onClick="cadastrar"
@@ -144,6 +145,19 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="376dp"
         app:layout_constraintHorizontal_bias="0.45" />
+=======
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:onClick="cadastrar"
+        android:gravity="bottom"
+        android:text="Cadastrar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="394dp"
+        android:id="@+id/button"
+        tools:layout_editor_absoluteY="394dp" />
+>>>>>>> master
 
     <TextView
         android:layout_width="wrap_content"
@@ -153,7 +167,11 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
         app:layout_constraintVertical_bias="0.86"
+=======
+        app:layout_constraintVertical_bias="0.886"
+>>>>>>> master
         app:layout_constraintHorizontal_bias="0.052" />
 
 </android.support.constraint.ConstraintLayout>

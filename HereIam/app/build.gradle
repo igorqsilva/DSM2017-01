@@ -5,7 +5,11 @@ android {
     buildToolsVersion "26.0.0"
     defaultConfig {
         applicationId "com.iam.here.hereiam"
+<<<<<<< HEAD
         minSdkVersion 19
+=======
+        minSdkVersion 17
+>>>>>>> master
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"

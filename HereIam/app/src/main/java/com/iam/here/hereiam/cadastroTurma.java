@@ -15,6 +15,16 @@ import android.widget.Toast;
 public class cadastroTurma extends AppCompatActivity {
 
     /**
+     * Variáveis Criadas para cadastro de Turma
+     * Para controle do arquivo XML
+     */
+    EditText nomeTurma;
+    EditText diaAulas;
+    EditText horarioAulas;
+    EditText chaveAcesso;
+    EditText local;
+
+    /**
      * Activity Lifecycle - Clico de vida da aplicação
      * Cria a aplicação para ser visivel ao usuário
      * @param savedInstanceState
@@ -23,6 +33,20 @@ public class cadastroTurma extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        nomeTurma = (EditText)findViewById(R.id.nomeTurma);
+        diaAulas = (EditText)findViewById(R.id.diaAulas);
+        horarioAulas = (EditText)findViewById(R.id.horarioAulas);
+        chaveAcesso = (EditText)findViewById(R.id.chaveAcesso);
+        local = (EditText)findViewById(R.id.local);
+
+        Button btSalvar = (Button) findViewById(R.id.btSalvar);
+
+        btSalvar.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(getApplicationContext(), "Click Salvar", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     /**
@@ -173,17 +197,17 @@ public class cadastroTurma extends AppCompatActivity {
             super.onCreate(saveInstanceState);
             setContentView(R.layout.activity_cadastro_turma);
 
-            Button botao = (Button)findViewById(R.id.button);
+            Button botao = (Button)findViewById(R.id.btSalvar);
 
             botao.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
                     cadastroTurma.BancoController crud = new cadastroTurma.BancoController(getBaseContext());
-                    EditText NomeTurma = (EditText) findViewById(R.id.editText);
-                    EditText diaAula = (EditText) findViewById(R.id.editText2);
-                    EditText horario = (EditText) findViewById(R.id.editText3);
-                    EditText chaveAcesso = (EditText) findViewById(R.id.editText4);
-                    EditText local = (EditText) findViewById(R.id.editText5);
+                    EditText NomeTurma = (EditText) findViewById(R.id.nomeTurma);
+                    EditText diaAula = (EditText) findViewById(R.id.diaAulas);
+                    EditText horario = (EditText) findViewById(R.id.horarioAulas);
+                    EditText chaveAcesso = (EditText) findViewById(R.id.chaveAcesso);
+                    EditText local = (EditText) findViewById(R.id.local);
                     String NomeTurmaString = NomeTurma.getText().toString();
                     String diaAulaString = diaAula.getText().toString();
                     String horarioString = horario.getText().toString();

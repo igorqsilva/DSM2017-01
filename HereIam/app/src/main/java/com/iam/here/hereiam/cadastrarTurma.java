@@ -1,31 +1,50 @@
 package com.iam.here.hereiam;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class cadastrarTurma extends AppCompatActivity {
 
-    /**
-     * Activity Lifecycle - Clico de vida da aplicação
-     * Cria a aplicação para ser visivel ao usuário
-     * @param savedInstanceState
-     */
+    EditText nomeTurma;
+    EditText diaAulas;
+    EditText horarioAulas;
+    EditText chaveAcesso;
+    EditText local;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.cadastrar_turma);
+
+        nomeTurma = (EditText)findViewById(R.id.nomeTurma);
+        diaAulas = (EditText)findViewById(R.id.diaAulas);
+        horarioAulas = (EditText)findViewById(R.id.horarioAulas);
+        chaveAcesso = (EditText)findViewById(R.id.chaveAcesso);
+        local = (EditText)findViewById(R.id.local);
+
+        Button btSalvar = (Button) findViewById(R.id.btSalvar);
+
+        btSalvar.setOnClickListener(new View.OnClickListener(){
+
+            public void onClick(View v){
+                Toast.makeText(getApplicationContext(), "Click Salvar", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     /**
-     * Faz com que o Botão de Cadastro de Turma redirecione para a tela de cadastro de turma
+     * Faz com que o Botão "Voltar" em Cadastro Turma redirecione para a tela Inicial
      * Metado chama outra Activity e faz a mudança de tela
      * @param view
      */
-    public void telaCadastroTurma(View view){
+    public void telaInicial(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), cadastrarTurma.class);
+        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent1);
     }
 

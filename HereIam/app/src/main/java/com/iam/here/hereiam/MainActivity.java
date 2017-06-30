@@ -8,9 +8,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private View view;
-
     /**
      * Activity Lifecycle - Clico de vida da aplicação
      * Cria a aplicação para ser visivel ao usuário
@@ -24,22 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Faz com que o Botão de Cadastro de Turma redirecione para a tela de cadastro de turma
+     * Metado chama outra Activity e faz a mudança de tela
      * @param view
      */
     public void telaCadastroTurma(View view){
 
         Intent intent1 = new Intent(getApplicationContext(), cadastroTurma.class);
         startActivity(intent1);
-    }
-
-    /**
-     * Classe Responsável pela troca emtre telas
-     * @param view
-     */
-    public void startSecondActivity(View view) {
-
-        Intent secondActivity = new Intent(this, cadastroTurma.class);
-        startActivity(secondActivity);
     }
 
     /**

@@ -1,19 +1,15 @@
 package com.iam.here.hereiam;
 
-import android.app.Activity;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+
+    private View view;
 
     /**
      * Activity Lifecycle - Clico de vida da aplicação
@@ -24,19 +20,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        /**
-         * Faz com que o Botão Cadastrar Turma vá para a págian de cadastro de turma
-         */
-        Button irCadastro = (Button) findViewById(R.id.irCadastro);
+    /**
+     * Faz com que o Botão de Cadastro de Turma redirecione para a tela de cadastro de turma
+     * @param view
+     */
+    public void telaCadastroTurma(View view){
 
-        irCadastro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, cadastroTurma.class);
-                startActivity(it);
-            }
-        });
+        Intent intent1 = new Intent(getApplicationContext(), cadastroTurma.class);
+        startActivity(intent1);
+    }
+
+    /**
+     * Classe Responsável pela troca emtre telas
+     * @param view
+     */
+    public void startSecondActivity(View view) {
+
+        Intent secondActivity = new Intent(this, cadastroTurma.class);
+        startActivity(secondActivity);
     }
 
     /**

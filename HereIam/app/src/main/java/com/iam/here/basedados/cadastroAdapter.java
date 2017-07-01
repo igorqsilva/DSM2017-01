@@ -90,11 +90,21 @@ public class cadastroAdapter extends BaseAdapter{
         this.cadastros.add(cadastroTurmaBase);
     }
 
+    /**
+     * Posição na tabela do Item
+     * @param position
+     * @return
+     */
     @Override
     public Object getItem(int position) {
         return cadastros.get(position);
     }
 
+    /**
+     * Posição na tabela do Item
+     * @param position
+     * @return
+     */
     @Override
     public long getItemId(int position) {
         return position;
@@ -146,7 +156,8 @@ public class cadastroAdapter extends BaseAdapter{
     }
 
     /**
-     * Variáveis que guardam 
+     * Variáveis que guardam os valores dos campos
+     * e Mostram  na tela os resultados cadastrados
      */
     static class ViewHolder{
         public TextView nomeTurma;

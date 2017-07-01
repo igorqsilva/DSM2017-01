@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp">
+    <!-- android:orientation="vertical" -->
+
+    <TextView
+        android:id="@+id/nomeTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turma"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/diaAulas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dia de Aulas"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@id/nomeTurma"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:id="@+id/horarioAulas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Horario das Aulas"
+        android:textStyle="italic"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/nomeTurma"
+        android:layout_toLeftOf="@id/diaAulas"/>
+
+    <TextView
+        android:id="@+id/chaveAcesso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chave de acesso"
+        android:textStyle="italic"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/diaAulas"
+        android:layout_toLeftOf="@id/horarioAulas"/>
+
+    <TextView
+        android:id="@+id/local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local"
+        android:textStyle="italic"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/horarioAulas"
+        android:layout_toLeftOf="@id/chaveAcesso"/>
+
+</RelativeLayout>

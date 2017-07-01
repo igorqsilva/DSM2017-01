@@ -25,7 +25,10 @@ public class MainActivity extends AppCompatActivity {
      */
     public void telaCadastroTurma(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), cadastrarTurma.class);
+        Intent intent1 = new Intent(getApplicationContext(), professor.class);
+        startActivity(intent1);
+
+        Intent intent2 = new Intent(getApplicationContext(), aluno.class);
         startActivity(intent1);
     }
 

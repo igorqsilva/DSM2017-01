@@ -12,14 +12,25 @@ import com.iam.here.basedados.cadastroTurmaDAO;
 
 public class cadastrarTurma extends Activity {
 
+    /**
+     * Variáveis para cadastro de uma nova turma
+     */
     EditText nomeTurma;
     EditText diaAulas;
     EditText horarioAulas;
     EditText chaveAcesso;
     EditText local;
 
+
     cadastroTurmaDAO cadastroTurmaDAO;
 
+    /**
+     * Pega os dados do Layout e atribui as variáveis
+     * Valores das variáveis serão gardados no banco de Dados
+     * Instancia o Botão btSalvar do Layout
+     * Grava os dados No Banco de Dados
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +47,7 @@ public class cadastrarTurma extends Activity {
         Button btSalvar = (Button) findViewById(R.id.btSalvar);
 
         btSalvar.setOnClickListener(new View.OnClickListener(){
+
             public void onClick(View v){
 
                 /**

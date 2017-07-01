@@ -16,6 +16,9 @@ import java.util.List;
  * Created by eliez on 01/07/2017.
  */
 
+/**
+ *
+ */
 public class cadastroAdapter extends BaseAdapter{
 
     private Context context;
@@ -23,6 +26,11 @@ public class cadastroAdapter extends BaseAdapter{
     private List<cadastroTurmaBase> cadastros;
     private LayoutInflater inflater;
 
+    /**
+     *
+     * @param context
+     * @param cadastros
+     */
     public cadastroAdapter(Context context, List<cadastroTurmaBase> cadastros) {
 
         super();
@@ -31,6 +39,9 @@ public class cadastroAdapter extends BaseAdapter{
         this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
+    /**
+     * Exibe mensagem de Erro
+     */
     @Override
     public void notifyDataSetChanged(){
 
@@ -42,10 +53,18 @@ public class cadastroAdapter extends BaseAdapter{
 
     }
 
+    /**
+     * exibe a msg de erro
+     * @param msg
+     */
     private void trace(String msg) {
         toast(msg);
     }
 
+    /**
+     * passa o parametro da mensagem
+     * @param msg
+     */
     public void toast(String msg) {
         Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
     }
@@ -55,10 +74,18 @@ public class cadastroAdapter extends BaseAdapter{
         return cadastros.size();
     }
 
+    /**
+     * Remove item
+     * @param cadastroTurmaBase
+     */
     public void remove(final cadastroTurmaBase cadastroTurmaBase){
         this.cadastros.remove(cadastroTurmaBase);
     }
 
+    /**
+     * Adiciona Item
+     * @param cadastroTurmaBase
+     */
     public void add(final cadastroTurmaBase cadastroTurmaBase){
         this.cadastros.add(cadastroTurmaBase);
     }
@@ -73,6 +100,13 @@ public class cadastroAdapter extends BaseAdapter{
         return position;
     }
 
+    /**
+     * Mostra a Listagem de Tuma na tela para o usuário
+     * @param position
+     * @param convertView
+     * @param viewGroup2
+     * @return
+     */
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup2) {
 
@@ -111,6 +145,9 @@ public class cadastroAdapter extends BaseAdapter{
         return convertView;
     }
 
+    /**
+     * Variáveis que guardam 
+     */
     static class ViewHolder{
         public TextView nomeTurma;
         public TextView diaAulas;

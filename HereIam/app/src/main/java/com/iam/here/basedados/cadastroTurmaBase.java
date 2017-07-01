@@ -11,6 +11,9 @@ import java.io.Serializable;
  */
 public class cadastroTurmaBase implements Serializable {
 
+    /**
+     * Variaáves usadas para cadastro de Turma
+     */
     private static final long serialVersionUID = 1L;
     private long id;
     private String nomeTurma;
@@ -23,6 +26,15 @@ public class cadastroTurmaBase implements Serializable {
 
     }
 
+    /**
+     * Classe usada para passagem de parametros
+     * De dados da Turma para persistencia  No Banco
+     * @param nomeTurma
+     * @param diaAulas
+     * @param horarioAulas
+     * @param chaveAcesso
+     * @param local
+     */
     public cadastroTurmaBase(String nomeTurma, String diaAulas, String horarioAulas, String chaveAcesso, String local){
         this.nomeTurma = nomeTurma;
         this.diaAulas = diaAulas;
@@ -31,6 +43,16 @@ public class cadastroTurmaBase implements Serializable {
         this.local = local;
     }
 
+    /**
+     * Classe usada para passagem de parametros
+     * De dados da Turma para persistencia  No Banco
+     * @param id
+     * @param nomeTurma
+     * @param diaAulas
+     * @param horarioAulas
+     * @param chaveAcesso
+     * @param local
+     */
     public cadastroTurmaBase(long id, String nomeTurma, String diaAulas, String horarioAulas, String chaveAcesso, String local){
         this.id = id;
         this.nomeTurma = nomeTurma;

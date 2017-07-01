@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
      * Metado chama outra Activity e faz a mudança de tela
      * @param view
      */
-    public void telaCadastroTurma(View view){
+    public void telaPerfil(View view){
 
         Intent intent1 = new Intent(getApplicationContext(), professor.class);
         startActivity(intent1);

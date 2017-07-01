@@ -55,6 +55,7 @@ public class baseDAO extends SQLiteOpenHelper {
             + campoLocal + " TEXT)";
 
     public baseDAO(Context context) {
+
         super(context, nomeBanco, null, VERSAO_SCHEMA);
     }
 
@@ -64,6 +65,7 @@ public class baseDAO extends SQLiteOpenHelper {
      */
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         db.execSQL(criaTabela);
     }
 

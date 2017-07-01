@@ -24,13 +24,21 @@ public class cadastroTurmaDAO {
     private baseDAO baseDAO;
 
     public cadastroTurmaDAO(Context context){
+
         baseDAO = new baseDAO(context);
     }
 
+    /**
+     * Abre uma nova Conexão com o Banco de Dados
+     * @throws SQLException
+     */
     public void open() throws SQLException {
         database = baseDAO.getWritableDatabase();
     }
 
+    /**
+     * Fecha A Conexão com o Banco de Dados
+     */
     public void close(){
         baseDAO.close();
     }
@@ -55,6 +63,8 @@ public class cadastroTurmaDAO {
 
     /**
      * Cria uma Lista de Turmas cadastradas
+     * Adiciona Dados A Lista
+     * Faz consultas no Banco de Dados
      * Mostrar os cadastros de Turma Realizados
      * @return
      */

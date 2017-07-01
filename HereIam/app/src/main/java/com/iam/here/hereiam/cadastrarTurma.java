@@ -1,5 +1,6 @@
 package com.iam.here.hereiam;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class cadastrarTurma extends AppCompatActivity {
+import com.iam.here.basedados.baseDAO;
+import com.iam.here.basedados.cadastroTurmaBase;
+import com.iam.here.basedados.cadastroTurmaDAO;
+
+public class cadastrarTurma extends Activity {
 
     EditText nomeTurma;
     EditText diaAulas;
@@ -16,26 +21,86 @@ public class cadastrarTurma extends AppCompatActivity {
     EditText chaveAcesso;
     EditText local;
 
+    cadastroTurmaDAO cadastroTurmaDAO;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cadastrar_turma);
 
-        nomeTurma = (EditText)findViewById(R.id.nomeTurma);
-        diaAulas = (EditText)findViewById(R.id.diaAulas);
-        horarioAulas = (EditText)findViewById(R.id.horarioAulas);
-        chaveAcesso = (EditText)findViewById(R.id.chaveAcesso);
-        local = (EditText)findViewById(R.id.local);
+        cadastroTurmaDAO = new cadastroTurmaDAO(this);
+
+        nomeTurma = (EditText) findViewById(R.id.nomeTurma);
+        diaAulas = (EditText) findViewById(R.id.diaAulas);
+        horarioAulas = (EditText) findViewById(R.id.horarioAulas);
+        chaveAcesso = (EditText) findViewById(R.id.chaveAcesso);
+        local = (EditText) findViewById(R.id.local);
 
         Button btSalvar = (Button) findViewById(R.id.btSalvar);
 
         btSalvar.setOnClickListener(new View.OnClickListener(){
-
             public void onClick(View v){
-                Toast.makeText(getApplicationContext(), "Click Salvar", Toast.LENGTH_SHORT).show();
+
+                /**
+                 * Variáveis para inserção de dados
+                 */
+                String nomeTurma = "";
+                String diaAulas = "";
+                String horarioAulas = "";
+                String chaveAcesso = "";
+                String local = "";
+
+                nomeTurma = nomeTurma.getBytes().toString();
+                diaAulas = diaAulas.getBytes().toString();
+                horarioAulas = horarioAulas.getBytes().toString();
+                chaveAcesso = chaveAcesso.getBytes().toString();
+                local = local.getBytes().toString();
+
+                /**
+                 * Cria Nova Turma
+                 * Passa os Parametros para inserir os dados no banco de Dados
+                 */
+                cadastroTurmaBase cadastroTurmaBase = new cadastroTurmaBase(nomeTurma, diaAulas, horarioAulas, chaveAcesso, local);
+
+                /**
+                 * Abre uma nova Conexão
+                 * No banco de Dados
+                 */
+                cadastroTurmaDAO.open();
+
+                /**
+                 * Insere os dados
+                 * E salva a Turma cadastrada
+                 */
+                cadastroTurmaDAO.novoCadastro(cadastroTurmaBase);
+
+                /**
+                 * Fecha a conexão com o banco de dados
+                 */
+                cadastroTurmaDAO.close();
+
+                /**
+                 * chama o metodo limpar
+                 * Para limpar os campos preenchidos e já salvos
+                 */
+                limparCampos();
             }
         });
     }
+
+    /**
+     * Metodo Responsável por Limpar os campos após uma inserção de dadaos
+     * Limpa os campos se a operação de gravação for efetivada no banco de dados
+     */
+    private void limparCampos(){
+        nomeTurma.setText("");
+        diaAulas.setText("");
+        horarioAulas.setText("");
+        chaveAcesso.setText("");
+        local.setText("");
+    }
+
+
 
     /**
      * Faz com que o Botão "Voltar" em Cadastro Turma redirecione para a tela Inicial
@@ -53,6 +118,7 @@ public class cadastrarTurma extends AppCompatActivity {
      */
     @Override
     protected void onStart(){
+
         super.onStart();
     }
 
@@ -61,6 +127,7 @@ public class cadastrarTurma extends AppCompatActivity {
      */
     @Override
     protected void onStop() {
+
         super.onStop();
     }
 
@@ -69,6 +136,7 @@ public class cadastrarTurma extends AppCompatActivity {
      */
     @Override
     protected void onRestart() {
+
         super.onRestart();
     }
 
@@ -78,6 +146,7 @@ public class cadastrarTurma extends AppCompatActivity {
      */
     @Override
     protected void onDestroy() {
+
         super.onDestroy();
     }
 }

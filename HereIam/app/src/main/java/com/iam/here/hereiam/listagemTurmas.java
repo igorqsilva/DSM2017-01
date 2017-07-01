@@ -41,13 +41,12 @@ public class listagemTurmas extends ListActivity {
 
         baseDAO = new baseDAO(this);
 
-        Button btCadastro2 = (Button) findViewById(R.id.btCadastro);
-        btCadastro2.setOnClickListener(new View.OnClickListener(){
+    }
 
-            public void onClick(View v){
-                startActivity(new Intent(listagemTurmas.this, cadastrarTurma.class));
-            }
-        });
+    public void telaCadastroTurma(View view){
+
+        Intent intent1 = new Intent(getApplicationContext(), cadastrarTurma.class);
+        startActivity(intent1);
     }
 
     /**

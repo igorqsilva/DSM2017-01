@@ -1,8 +1,9 @@
 package com.iam.here.hereiam;
 
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -118,7 +119,7 @@ public class cadastrarTurma extends Activity {
      */
     public void telaInicial(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent1 = new Intent(getApplicationContext(), listagemTurmas.class);
         startActivity(intent1);
     }
 

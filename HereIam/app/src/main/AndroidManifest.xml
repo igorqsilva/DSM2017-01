@@ -3,7 +3,7 @@
     package="com.iam.here.hereiam">
 
     <application
-        android:allowBackup="false"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastrarTurma"></activity>
+        <activity android:name=".cadastrarTurma" />
+        <activity android:name=".listagemTurma" />
+        <activity android:name=".listagemTurmas"></activity>
     </application>
 
 </manifest>

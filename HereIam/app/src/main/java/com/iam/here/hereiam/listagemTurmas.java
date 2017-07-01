@@ -14,10 +14,6 @@ import com.iam.here.basedados.cadastroTurmaDAO;
 import com.iam.here.basedados.baseDAO;
 
 /**
- * Created by eliezer on 01/07/2017.
- */
-
-/**
  * Cria a lisatgem de Turma
  * As variáveis de Listagem
  * e Redireciona para a pagina de cadastro de Turma
@@ -45,11 +41,11 @@ public class listagemTurmas extends ListActivity {
 
         baseDAO = new baseDAO(this);
 
-        Button btCadastro2 = (Button) findViewById(R.id.btCadastro2);
+        Button btCadastro2 = (Button) findViewById(R.id.btCadastro);
         btCadastro2.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v){
-                startActivity(new Intent(listagemTurmas.this, cadastrarTurma.class ));
+                startActivity(new Intent(listagemTurmas.this, cadastrarTurma.class));
             }
         });
     }

@@ -13,11 +13,11 @@ import com.iam.here.hereiam.R;
 import java.util.List;
 
 /**
- * Created by eliez on 01/07/2017.
+ * Created by eliezer on 01/07/2017.
  */
 
 /**
- *
+ * Classe para mostrar Dados
  */
 public class cadastroAdapter extends BaseAdapter{
 

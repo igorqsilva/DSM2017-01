@@ -5,8 +5,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+/**
+ * Classe do Perfil de Aluno
+ */
 public class aluno extends AppCompatActivity {
 
+    /**
+     * Cria a aplicação para tela do perfil de aluno
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -128,11 +128,12 @@ public class cadastroAdapter extends BaseAdapter{
                 convertView = inflater.inflate(R.layout.cadastros_de_turmas, null);
 
                 holder = new ViewHolder();
-                holder.nomeTurma = (TextView) convertView.findViewById(R.id.nomeTurma);
-                holder.diaAulas = (TextView) convertView.findViewById(R.id.diaAulas);
-                holder.horarioAulas = (TextView) convertView.findViewById(R.id.horarioAulas);
-                holder.chaveAcesso = (TextView) convertView.findViewById(R.id.chaveAcesso);
-                holder.local = (TextView) convertView.findViewById(R.id.local);
+
+                holder.nomeTurma = (TextView) convertView.findViewById(R.id.lNomeTurma);
+                holder.diaAulas = (TextView) convertView.findViewById(R.id.lDiaAulas);
+                holder.horarioAulas = (TextView) convertView.findViewById(R.id.lHorarioAulas);
+                holder.chaveAcesso = (TextView) convertView.findViewById(R.id.lChaveAcesso);
+                holder.local = (TextView) convertView.findViewById(R.id.lLocal);
 
                 convertView.setTag(holder);
             }
@@ -149,7 +150,7 @@ public class cadastroAdapter extends BaseAdapter{
             return convertView;
 
         } catch (Exception e){
-            trace("Erro:" + e.getMessage());
+            trace("Erro: " + e.getMessage());
         }
 
         return convertView;

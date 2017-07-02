@@ -21,7 +21,8 @@
         <activity android:name=".listagemTurmas" />
         <activity android:name=".cadastroAlunoTurma" />
         <activity android:name=".aluno" />
-        <activity android:name=".professor"></activity>
+        <activity android:name=".professor" />
+        <activity android:name=".cadastroUsuario"></activity>
     </application>
 
 </manifest>

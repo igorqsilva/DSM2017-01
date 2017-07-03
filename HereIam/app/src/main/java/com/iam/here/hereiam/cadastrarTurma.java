@@ -110,8 +110,6 @@ public class cadastrarTurma extends Activity {
         local.setText("");
     }
 
-
-
     /**
      * Faz com que o Botão "Voltar" em Cadastro Turma redirecione para a tela Inicial
      * Metado chama outra Activity e faz a mudança de tela

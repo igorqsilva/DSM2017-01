@@ -64,6 +64,9 @@ public class listagemTurmas extends ListActivity {
         super.onResume();
     }
 
+    /**
+     *Inicia a aplicação se a mesma já foi criada
+     */
     @Override
     protected void onStart(){
 

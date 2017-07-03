@@ -51,6 +51,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onStop();
     }
 
+    /**
+     *
+     * @param v
+     */
     public void login(View v) {
 
         hideKeyboard();
@@ -88,7 +92,17 @@ public class LoginActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
+    public void startCadastroActivity(View view) {
 
+        Intent secondActivity = new Intent(this, CadastroActivity.class);
+        startActivity(secondActivity);
+    }
+
+
+    /**
+     *  verifica se o campo da senha não está vazio e se a senha tem o tamanho minimo
+     * @throws FormProblemException
+     */
     private void checkSenha() throws FormProblemException {
         String senha = getStringFromEdit(R.id.senha);
         if ("".equals(senha)) {

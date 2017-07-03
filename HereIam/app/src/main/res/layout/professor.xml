@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:label="Cadastro Turma"
-    android:onClick="startLoginActivity"
-    tools:context="com.iam.here.hereiam.MainActivity">
+    tools:context="com.iam.here.hereiam.professor">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Here I am"
+        android:text="Professor"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,35 +19,18 @@
         app:layout_constraintHorizontal_bias="0.501" />
 
     <Button
-        android:id="@+id/btProfessor"
+        android:id="@+id/btCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_column="0"
         android:layout_row="9"
-        android:onClick="telaPerfil2"
-        android:text="Professor"
+        android:onClick="telaCadastroTurma"
+        android:text="Cadastrar Turma"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115"
-        app:layout_constraintHorizontal_bias="0.205"/>
-
-    <Button
-        android:id="@+id/btAluno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="9"
-        android:onClick="telaPerfil1"
-        android:text="Aluno"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115"
-        app:layout_constraintHorizontal_bias="0.787"/>
+        app:layout_constraintVertical_bias="0.109" />
 
 </android.support.constraint.ConstraintLayout>

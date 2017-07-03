@@ -6,10 +6,10 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:allowBackup="false"
-        android:icon="@mipmap/ic_launcher"
-        android:label=""
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:allowBackup="true"
+        android:icon="@mipmap/hia_launcher"
+        android:label="Here I AM"
+        android:roundIcon="@mipmap/hia_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
@@ -19,7 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastroTurma"></activity>
+        <activity android:name=".cadastrarTurma" />
+        <activity android:name=".listagemTurma" />
+        <activity android:name=".listagemTurmas" />
+        <activity android:name=".cadastroAlunoTurma" />
+        <activity android:name=".aluno" />
+        <activity android:name=".professor" />
+        <activity android:name=".cadastroUsuario" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".CadastroActivity"/>
+        <activity android:name=".cadastrosDeTurmas"></activity>
     </application>
 
 </manifest>

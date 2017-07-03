@@ -19,9 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastroTurma" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".CadastroActivity"></activity>
+        <activity android:name=".cadastroTurma"></activity>
     </application>
 
 </manifest>

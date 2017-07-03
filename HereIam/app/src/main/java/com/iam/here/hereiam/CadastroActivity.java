@@ -57,8 +57,8 @@ public class CadastroActivity extends AppCompatActivity {
      * Classe do banco de Dados SQLiteOpenHelper
      * Definição da classe para o banco de dados
      * E implementação dos metodos da Classe SQLiteOpenHelper
-     * Classe possui os atributos da Tabela de turmas
-     * Tabela de turma ficará armazenada as turmas criadas pelo professor
+     * Classe possui os atributos da Tabela de usuarios
+     * Tabela de usuarios ficará armazenada as informaçoes dos usuarios
      * Cria o Banco de Dados
      */
     public class Banco extends SQLiteOpenHelper {

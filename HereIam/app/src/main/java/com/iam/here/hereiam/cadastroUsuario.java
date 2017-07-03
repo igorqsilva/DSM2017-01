@@ -11,6 +11,9 @@ public class cadastroUsuario extends AppCompatActivity {
         setContentView(R.layout.cadastro_usuario);
     }
 
+    /**
+     *Inicia a aplicação se a mesma já foi criada
+     */
     @Override
     protected void onStart(){
 

@@ -1,42 +1,32 @@
 package com.iam.here.hereiam;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Classe do perfil do professor
+ */
+public class professor extends AppCompatActivity {
 
     /**
-     * Activity Lifecycle - Clico de vida da aplicação
-     * Cria a aplicação para ser visivel ao usuário
+     * Cria a aplicação do perfil do professor
      * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.professor);
     }
 
     /**
-     * Faz com que o Botão aluno redirecione para a tela de opções de aluno
-     * Metado chama outra Activity e faz a mudança de tela
+     * Faz a ação do botão de cadastrar turma ir para a tela de cadastro
      * @param view
      */
-    public void telaPerfil1(View view){
+    public void telaCadastroTurma(View view){
 
-        Intent intent2 = new Intent(getApplicationContext(), aluno.class);
-        startActivity(intent2);
-    }
-
-    /**
-     * Faz com que o Botão professor redirecione para a tela de opções do professor
-     * Metado chama outra Activity e faz a mudança de tela
-     * @param view
-     */
-    public void telaPerfil2(View view){
-
-        Intent intent1 = new Intent(getApplicationContext(), professor.class);
+        Intent intent1 = new Intent(getApplicationContext(), cadastrarTurma.class);
         startActivity(intent1);
     }
 
@@ -45,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onStart(){
+
         super.onStart();
     }
 
@@ -53,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onStop() {
+
         super.onStop();
     }
 
@@ -61,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onRestart() {
+
         super.onRestart();
     }
 
@@ -70,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
      */
     @Override
     protected void onDestroy() {
+
         super.onDestroy();
     }
 }

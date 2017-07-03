@@ -3,6 +3,7 @@ package com.iam.here.hereiam;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void startLoginActivity(View view) {
+
+        Intent secondActivity = new Intent(this, LoginActivity.class);
+        startActivity(secondActivity);
     }
 
     /**

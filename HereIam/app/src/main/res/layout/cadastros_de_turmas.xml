@@ -3,7 +3,65 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.iam.here.hereiam.cadastrosDeTurmas">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lNomeTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turma:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="63dp"
+        app:layout_constraintHorizontal_bias="0.047"/>
+
+    <TextView
+        android:id="@+id/lDiaAulas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dias de Aulas: "
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="93dp"
+        app:layout_constraintHorizontal_bias="0.053"/>
+
+    <TextView
+        android:id="@+id/lHorarioAulas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horarios das Aulas: "
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="128dp"
+        app:layout_constraintHorizontal_bias="0.059" />
+
+    <TextView
+        android:id="@+id/lChaveAcesso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chave de acesso: "
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="161dp"
+        app:layout_constraintHorizontal_bias="0.058" />
+
+    <TextView
+        android:id="@+id/lLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Local: "
+        android:textStyle="italic"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="200dp"
+        app:layout_constraintHorizontal_bias="0.046" />
 
 </android.support.constraint.ConstraintLayout>

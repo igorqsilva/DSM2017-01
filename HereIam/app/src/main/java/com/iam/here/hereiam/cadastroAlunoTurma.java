@@ -19,6 +19,9 @@ public class cadastroAlunoTurma extends AppCompatActivity {
         setContentView(R.layout.cadastro_aluno_turma);
     }
 
+    /**
+     *Inicia a aplicação se a mesma já foi criada
+     */
     @Override
     protected void onStart(){
 

@@ -98,6 +98,18 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(secondActivity);
     }
 
+    public void startAluno(View view) {
+
+        Intent secondActivity = new Intent(this, professor.class);
+        startActivity(secondActivity);
+    }
+
+    public void startProfessor(View view) {
+
+        Intent secondActivity = new Intent(this, aluno.class);
+        startActivity(secondActivity);
+    }
+
 
     /**
      *  verifica se o campo da senha não está vazio e se a senha tem o tamanho minimo
@@ -114,6 +126,10 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     *
+     * @throws FormProblemException
+     */
     private void checkMatricula() throws FormProblemException {
         String email = getStringFromEdit(R.id.matricula);
         if ("".equals(email)) {
@@ -126,24 +142,11 @@ public class LoginActivity extends AppCompatActivity {
         webLogin.call();
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMessageEvent(User user) {
-        dismissDialog();
-        storeCredentials(user);
-        goToHome();
-    }
-
     private void storeCredentials(User user) {
         EasySharedPreferences.setStringFromKey(this, EasySharedPreferences.KEY_MATRICULA, user.getEmail());
         EasySharedPreferences.setStringFromKey(this, EasySharedPreferences.KEY_TOKEN, user.getToken());
     }
 
-    private void goToHome() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
-
-    }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onMessageEvent(Exception exception) {

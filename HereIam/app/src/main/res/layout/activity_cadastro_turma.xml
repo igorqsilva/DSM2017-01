@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cadastro de Turma"
+        android:textSize="35sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
@@ -80,8 +81,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
-            android:gravity="bottom"
-            android:textAlignment="center"
+            android:gravity="center"
             android:onClick="cadastrar"
             android:text="Cadastrar"
             app:layout_constraintLeft_toLeftOf="parent"

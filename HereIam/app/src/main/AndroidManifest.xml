@@ -20,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".cadastrarTurma" />
-        <activity android:name=".listagemTurma" />
         <activity android:name=".listagemTurmas" />
         <activity android:name=".cadastroAlunoTurma" />
         <activity android:name=".aluno" />

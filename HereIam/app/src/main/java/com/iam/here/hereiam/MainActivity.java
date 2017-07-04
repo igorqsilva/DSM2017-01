@@ -32,28 +32,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Faz com que o Botão aluno redirecione para a tela de opções de aluno
-     * Metado chama outra Activity e faz a mudança de tela
-     * @param view
-     */
-    public void telaPerfil1(View view){
-
-        Intent intent2 = new Intent(getApplicationContext(), aluno.class);
-        startActivity(intent2);
-    }
-
-    /**
-     * Faz com que o Botão professor redirecione para a tela de opções do professor
-     * Metado chama outra Activity e faz a mudança de tela
-     * @param view
-     */
-    public void telaPerfil2(View view){
-
-        Intent intent1 = new Intent(getApplicationContext(), professor.class);
-        startActivity(intent1);
-    }
-
-    /**
      *Inicia a aplicação se a mesma já foi criada
      */
     @Override

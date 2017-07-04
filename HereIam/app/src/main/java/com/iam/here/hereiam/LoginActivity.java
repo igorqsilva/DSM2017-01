@@ -100,13 +100,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public void startAluno(View view) {
 
-        Intent secondActivity = new Intent(this, professor.class);
+        Intent secondActivity = new Intent(this, aluno.class);
         startActivity(secondActivity);
     }
 
     public void startProfessor(View view) {
 
-        Intent secondActivity = new Intent(this, aluno.class);
+        Intent secondActivity = new Intent(this, professor.class);
         startActivity(secondActivity);
     }
 
@@ -131,8 +131,8 @@ public class LoginActivity extends AppCompatActivity {
      * @throws FormProblemException
      */
     private void checkMatricula() throws FormProblemException {
-        String email = getStringFromEdit(R.id.matricula);
-        if ("".equals(email)) {
+        String senha = getStringFromEdit(R.id.senha);
+        if ("".equals(senha)) {
             throw new FormProblemException(getString(R.string.error_password_empty));
         }
     }

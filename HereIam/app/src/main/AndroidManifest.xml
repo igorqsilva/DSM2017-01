@@ -24,7 +24,6 @@
         <activity android:name=".cadastroAlunoTurma" />
         <activity android:name=".aluno" />
         <activity android:name=".professor" />
-        <activity android:name=".cadastroUsuario" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CadastroActivity"/>
         <activity android:name=".cadastrosDeTurmas"></activity>

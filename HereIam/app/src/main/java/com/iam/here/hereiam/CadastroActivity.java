@@ -3,6 +3,7 @@ package com.iam.here.hereiam;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -51,6 +52,23 @@ public class CadastroActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
+
+    public void startUserInterface(View view) {
+        String perfil = getStringFromEdit(R.id.perfil);
+        if ("Aluno".equals(perfil)) {
+            Intent userInterface = new Intent(this, aluno.class);
+            startActivity(userInterface);
+        } else if ("Professor".equals(perfil)){
+            Intent userInterface = new Intent(this, professor.class);
+            startActivity(userInterface);
+        }
+
+    }
+
+    public String getStringFromEdit(int id) {
+        EditText input = (EditText) findViewById(id);
+        return input.getText().toString();
     }
 
     /**
@@ -154,6 +172,8 @@ public class CadastroActivity extends AppCompatActivity {
             else
                 return "Registro Inserido com sucesso";
         }
+
+
     }
 
     /**

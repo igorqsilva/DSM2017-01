@@ -81,6 +81,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="16dp"
             android:gravity="bottom"
+            android:textAlignment="center"
             android:onClick="cadastrar"
             android:text="Cadastrar"
             app:layout_constraintLeft_toLeftOf="parent"

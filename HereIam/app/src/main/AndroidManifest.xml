@@ -19,14 +19,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cadastrarTurma" />
-        <activity android:name=".listagemTurmas" />
-        <activity android:name=".cadastroAlunoTurma" />
         <activity android:name=".aluno" />
-        <activity android:name=".professor" />
-        <activity android:name=".loginActivity" />
+        <activity android:name=".cadastrarTurma" />
         <activity android:name=".cadastroActivity"/>
-        <activity android:name=".cadastrosDeTurmas"></activity>
+        <activity android:name=".cadastroAlunoTurma" />
+        <activity android:name=".cadastrosDeTurmas" />
+        <activity android:name=".cadastroTurma" />
+        <activity android:name=".listagemTurmas" />
+        <activity android:name=".loginActivity" />
+        <activity android:name=".professor"></activity>
     </application>
 
     <supports-screens android:smallScreens="true"

@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class CadastroActivity extends AppCompatActivity {
+public class cadastroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -146,10 +146,10 @@ public class CadastroActivity extends AppCompatActivity {
      */
     public class BancoController {
         private SQLiteDatabase db;
-        private CadastroActivity.Banco banco;
+        private cadastroActivity.Banco banco;
 
         public BancoController(Context context) {
-            banco = new CadastroActivity.Banco(context);
+            banco = new cadastroActivity.Banco(context);
         }
 
         public String insereDado(String Matricula, String Nome, String Email, String Senha, String Perfil) {
@@ -158,13 +158,13 @@ public class CadastroActivity extends AppCompatActivity {
 
             db = banco.getWritableDatabase();
             valores = new ContentValues();
-            valores.put(CadastroActivity.Banco.Matricula, Matricula);
-            valores.put(CadastroActivity.Banco.Nome, Nome);
-            valores.put(CadastroActivity.Banco.Email, Email);
-            valores.put(CadastroActivity.Banco.Senha, Senha);
-            valores.put(CadastroActivity.Banco.Perfil, Perfil);
+            valores.put(cadastroActivity.Banco.Matricula, Matricula);
+            valores.put(cadastroActivity.Banco.Nome, Nome);
+            valores.put(cadastroActivity.Banco.Email, Email);
+            valores.put(cadastroActivity.Banco.Senha, Senha);
+            valores.put(cadastroActivity.Banco.Perfil, Perfil);
 
-            resultado = db.insert(CadastroActivity.Banco.Tabela_usuarios, null, valores);
+            resultado = db.insert(cadastroActivity.Banco.Tabela_usuarios, null, valores);
             db.close();
 
             if (resultado == -1)
@@ -194,7 +194,7 @@ public class CadastroActivity extends AppCompatActivity {
             botao.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
-                    CadastroActivity.BancoController crud = new CadastroActivity.BancoController(getBaseContext());
+                    cadastroActivity.BancoController crud = new cadastroActivity.BancoController(getBaseContext());
                     EditText Nome = (EditText) findViewById(R.id.nome);
                     EditText Matricula = (EditText) findViewById(R.id.email);
                     EditText Email = (EditText) findViewById(R.id.matricula);

@@ -34,6 +34,6 @@
         android:clickable="true"
         android:onClick="cadastroAlunoTurma"
         app:backgroundTint="@color/colorAccentLight"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@drawable/btn_plus" />
 
 </FrameLayout>

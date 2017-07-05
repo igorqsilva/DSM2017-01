@@ -34,7 +34,7 @@
         android:layout_marginRight="10dp"
         android:clickable="true"
         android:onClick="telaCadastroTurma"
-        app:backgroundTint="@color/colorAccentLight"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:backgroundTint="@color/colorAccent"
+        app:srcCompat="@drawable/btn_plus" />
 
 </FrameLayout>

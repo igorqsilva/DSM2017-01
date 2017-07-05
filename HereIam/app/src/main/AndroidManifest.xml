@@ -2,8 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.iam.here.hereiam">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -21,18 +29,12 @@
         </activity>
         <activity android:name=".cadastrarTurma" />
         <activity android:name=".listagemTurmas" />
-        <activity android:name=".cadastroAlunoTurma" />
         <activity android:name=".aluno" />
         <activity android:name=".professor" />
         <activity android:name=".loginActivity" />
-        <activity android:name=".cadastroActivity"/>
-        <activity android:name=".cadastrosDeTurmas"></activity>
+        <activity android:name=".cadastroActivity" />
+        <activity android:name=".cadastrosDeTurmas" />
+        <activity android:name=".cadastroAlunoTurma"></activity>
     </application>
 
-    <supports-screens android:smallScreens="true"
-        android:normalScreens="true"
-        android:largeScreens="true"
-        android:xlargeScreens="true"
-        android:anyDensity="true"
-        android:resizeable="true"/>
 </manifest>

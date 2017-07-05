@@ -9,9 +9,10 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:text="Professor"
-        android:layout_gravity="center|top"
+        android:layout_marginTop="7sp"
+        android:layout_marginLeft="5sp"
+        android:text="Turmas Ativas:"
+        android:layout_gravity="top"
         android:textSize="25sp"/>
 
     <ListView
@@ -20,7 +21,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25sp"
-        android:layout_above="@id/btCadastro"
         android:visibility="visible">
 
     </ListView>

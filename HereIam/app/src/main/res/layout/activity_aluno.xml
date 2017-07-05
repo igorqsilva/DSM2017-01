@@ -4,19 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Aluno"
-        android:textSize="25sp"
-        android:layout_gravity="top|center"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Turmas:"
+        android:text="Suas Turmas:"
         android:textSize="20sp"
-        android:layout_marginTop="25sp"/>
+        android:layout_margin="15sp"/>
 
     <ListView
         android:id="@+id/listTurmasAluno"
@@ -33,7 +27,7 @@
         android:layout_marginRight="10dp"
         android:clickable="true"
         android:onClick="cadastroAlunoTurma"
-        app:backgroundTint="@color/colorAccentLight"
+        app:backgroundTint="@color/colorAccent"
         app:srcCompat="@drawable/btn_plus" />
 
 </FrameLayout>

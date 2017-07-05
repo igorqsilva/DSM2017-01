@@ -1,15 +1,8 @@
 package com.iam.here.hereiam;
 
-import android.app.Activity;
-import android.content.ContentValues;
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void startLoginActivity(View view) {
 
-        Intent secondActivity = new Intent(this, LoginActivity.class);
+        Intent secondActivity = new Intent(this, loginActivity.class);
         startActivity(secondActivity);
     }
 

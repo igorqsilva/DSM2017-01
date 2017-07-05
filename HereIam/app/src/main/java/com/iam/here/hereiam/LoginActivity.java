@@ -12,16 +12,13 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import com.iam.here.hereiam.model.FormProblemException;
 import com.iam.here.hereiam.data.EasySharedPreferences;
-import com.iam.here.hereiam.web.WebConnection;
 import com.iam.here.hereiam.web.WebLogin;
-import com.iam.here.hereiam.web.WebTodo;
 import com.iam.here.hereiam.model.User;
 
-import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
-public class LoginActivity extends AppCompatActivity {
+public class loginActivity extends AppCompatActivity {
 
     private final int MIN_PASSWORD = 6;
     MaterialDialog dialog;
@@ -94,7 +91,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void startCadastroActivity(View view) {
 
-        Intent secondActivity = new Intent(this, CadastroActivity.class);
+        Intent secondActivity = new Intent(this, cadastroActivity.class);
         startActivity(secondActivity);
     }
 

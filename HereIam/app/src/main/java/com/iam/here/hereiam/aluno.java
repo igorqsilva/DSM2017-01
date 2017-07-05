@@ -11,13 +11,13 @@ import android.view.View;
 public class aluno extends AppCompatActivity {
 
     /**
-     * Cria a aplicação para tela do perfil de aluno
+     * Cria a aplicação para tela do perfil de activity_aluno
      * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.aluno);
+        setContentView(R.layout.activity_aluno);
     }
 
     /**

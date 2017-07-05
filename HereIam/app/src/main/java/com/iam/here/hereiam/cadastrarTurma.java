@@ -1,6 +1,5 @@
 package com.iam.here.hereiam;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -35,7 +34,7 @@ public class cadastrarTurma extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cadastrar_turma);
+        setContentView(R.layout.activity_cadastrar_turma);
 
         cadastroTurmaDAO = new cadastroTurmaDAO(this);
 

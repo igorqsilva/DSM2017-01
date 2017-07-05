@@ -125,7 +125,7 @@ public class cadastroAdapter extends BaseAdapter{
             ViewHolder holder;
 
             if (convertView == null){
-                convertView = inflater.inflate(R.layout.cadastros_de_turmas, null);
+                convertView = inflater.inflate(R.layout.activity_cadastros_de_turmas, null);
 
                 holder = new ViewHolder();
 

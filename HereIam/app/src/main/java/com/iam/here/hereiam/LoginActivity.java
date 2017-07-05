@@ -103,7 +103,7 @@ public class loginActivity extends AppCompatActivity {
 
     public void startProfessor(View view) {
 
-        Intent secondActivity = new Intent(this, professor.class);
+        Intent secondActivity = new Intent(this, listagemTurmas.class);
         startActivity(secondActivity);
     }
 

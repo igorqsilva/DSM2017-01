@@ -7,7 +7,7 @@
 
     <Button
         android:id="@+id/btCadastro"
-        android:text="Turmas Cadastradas"
+        android:text="Nova Turma"
         android:layout_width="230dp"
         android:layout_height="63dp"
         android:layout_alignParentBottom="true"
@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Turmas Cadastradas"
+        android:text="Professor"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

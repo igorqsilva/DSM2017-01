@@ -25,10 +25,10 @@ public class aluno extends AppCompatActivity {
      * Metado chama outra Activity e faz a mudança de tela
      * @param view
      */
-    public void buscar(View view){
+    public void cadastroAlunoTurma(View view){
 
-        Intent intent1 = new Intent(getApplicationContext(), cadastroAlunoTurma.class);
-        startActivity(intent1);
+        Intent cadastroAlunoTurma = new Intent(getApplicationContext(), cadastroAlunoTurma.class);
+        startActivity(cadastroAlunoTurma);
 
     }
 

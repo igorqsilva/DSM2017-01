@@ -6,18 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 
 /**
- * Classe do perfil do professor
+ * Classe do perfil do activity_professor
  */
 public class professor extends AppCompatActivity {
 
     /**
-     * Cria a aplicação do perfil do professor
+     * Cria a aplicação do perfil do activity_professor
      * @param savedInstanceState
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.professor);
+        setContentView(R.layout.activity_professor);
     }
 
     /**

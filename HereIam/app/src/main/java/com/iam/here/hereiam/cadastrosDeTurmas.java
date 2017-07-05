@@ -8,7 +8,7 @@ public class cadastrosDeTurmas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cadastros_de_turmas);
+        setContentView(R.layout.activity_cadastros_de_turmas);
     }
 
     /**

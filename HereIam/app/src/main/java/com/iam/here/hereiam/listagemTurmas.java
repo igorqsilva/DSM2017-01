@@ -7,11 +7,6 @@ import android.view.View;
 
 import java.util.List;
 
-import com.iam.here.basedados.cadastroAdapter;
-import com.iam.here.basedados.cadastroTurmaBase;
-import com.iam.here.basedados.cadastroTurmaDAO;
-import com.iam.here.basedados.baseDAO;
-
 /**
  * Cria a lisatgem de Turma
  * As variáveis de Listagem

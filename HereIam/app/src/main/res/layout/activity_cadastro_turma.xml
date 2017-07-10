@@ -17,7 +17,8 @@
             android:text="Cadastro de Turma"
             android:textSize="35sp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"/>
 
         <LinearLayout
             android:id="@+id/linearLayout1"
@@ -27,59 +28,59 @@
             android:layout_below="@+id/textView"
             android:layout_alignParentStart="true"
             android:layout_marginTop="15dp">
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nome da Turma" />
+
             <EditText
-                android:id="@+id/nomeTurma"
+                android:id="@+id/editNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords" />
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dias de Aulas" />
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:ems="10"
+                android:hint="Nome da Turma"
+                android:inputType="textPersonName" />
+
             <EditText
-                android:id="@+id/diaAulas"
+                android:id="@+id/editHorario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="date" />
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Horario de Aulas" />
+                android:ems="10"
+                android:hint="Horarios de Aulas"
+                android:inputType="time"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
             <EditText
-                android:id="@+id/horarioAulas"
+                android:id="@+id/editDia"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="date" />
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Chave de Acesso" />
+                android:ems="10"
+                android:hint="Dias de Aulas"
+                android:inputType="date"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
             <EditText
-                android:id="@+id/chaveAcesso"
+                android:id="@+id/editChave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textVisiblePassword" />
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Local" />
+                android:ems="10"
+                android:hint="Chave de Acesso"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
+
             <EditText
-                android:id="@+id/local"
+                android:id="@+id/editLocal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textCapWords" />
+                android:ems="10"
+                android:hint="Local"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
 
             <Button
-                android:id="@+id/btSalvar"
+                android:id="@+id/btnSalvar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_alignParentBottom="true"
@@ -90,7 +91,9 @@
                 android:text="Cadastrar"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"/>
 
         </LinearLayout>
     <!-- xmlns:app="http://schemas.android.com/apk/res-auto" -->

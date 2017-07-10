@@ -18,11 +18,8 @@ public class cadastroTurma extends AppCompatActivity {
      * Variáveis Criadas para cadastro de Turma
      * Para controle do arquivo XML
      */
-    EditText nomeTurma;
-    EditText diaAulas;
-    EditText horarioAulas;
-    EditText chaveAcesso;
-    EditText local;
+    EditText editNome, editDia, edithorario, editchave, editLocal;
+    Button btnSalvar;
 
     /**
      * Activity Lifecycle - Clico de vida da aplicação
@@ -34,13 +31,13 @@ public class cadastroTurma extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nomeTurma = (EditText)findViewById(R.id.nomeTurma);
-        diaAulas = (EditText)findViewById(R.id.diaAulas);
-        horarioAulas = (EditText)findViewById(R.id.horarioAulas);
-        chaveAcesso = (EditText)findViewById(R.id.chaveAcesso);
-        local = (EditText)findViewById(R.id.local);
+        editNome = (EditText)findViewById(R.id.editNome);
+        edithorario = (EditText)findViewById(R.id.editHorario);
+        editDia = (EditText)findViewById(R.id.editDia);
+        editchave = (EditText)findViewById(R.id.editChave);
+        editLocal = (EditText)findViewById(R.id.editLocal);
 
-        Button btSalvar = (Button) findViewById(R.id.btSalvar);
+        Button btSalvar = (Button) findViewById(R.id.btnSalvar);
 
         btSalvar.setOnClickListener(new View.OnClickListener(){
 

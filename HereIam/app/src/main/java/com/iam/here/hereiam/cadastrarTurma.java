@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.iam.here.basedados.cadastroTurmaBase;
-import com.iam.here.basedados.cadastroTurmaDAO;
-
 public class cadastrarTurma extends Activity {
 
     /**

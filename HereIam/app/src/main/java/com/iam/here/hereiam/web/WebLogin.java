@@ -18,19 +18,19 @@ import okhttp3.Response;
 public class WebLogin extends WebConnection {
 
     private static final String SERVICE = "login";
-    private String email;
+    private String matricula;
     private String password;
 
-    public WebLogin(String email, String password) {
+    public WebLogin(String matricula, String password) {
         super(SERVICE);
-        this.email = email;
+        this.matricula = matricula;
         this.password = password;
     }
 
     @Override
     String getRequestContent() {
         Map<String,String> requestMap = new HashMap<>();
-        requestMap.put("login", email);
+        requestMap.put("login", matricula);
         requestMap.put("password", password);
 
         JSONObject json = new JSONObject(requestMap);
@@ -46,7 +46,7 @@ public class WebLogin extends WebConnection {
             responseBody = response.body().string();
             User user = new User();
             JSONObject object = new JSONObject(responseBody);
-            user.setEmail(email);
+            user.setEmail(matricula);
             user.setName(object.getString("username"));
             user.setToken(object.getString("token"));
             EventBus.getDefault().post(user);

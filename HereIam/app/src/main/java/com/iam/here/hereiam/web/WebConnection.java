@@ -18,7 +18,7 @@ import okhttp3.Response;
 
 public abstract class WebConnection {
 
-    private static final String BASE_URL = "http://private-54aacf-todo87.apiary-mock.com/";
+    private static final String BASE_URL = "http://private-6820d9-dsdmlogin.apiary-mock.com/";
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
     private String serviceName;

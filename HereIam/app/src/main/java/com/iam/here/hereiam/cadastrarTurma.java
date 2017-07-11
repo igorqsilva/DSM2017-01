@@ -1,30 +1,42 @@
 package com.iam.here.hereiam;
 
+import android.app.Service;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import com.iam.here.bancodados.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class cadastrarTurma extends Activity {
 
     /**
      * Variáveis para cadastro de uma nova turma
      */
-    EditText nomeTurma;
-    EditText diaAulas;
-    EditText horarioAulas;
-    EditText chaveAcesso;
-    EditText local;
+    EditText editTurma, editHorario,  editDia, editChave, editLocal, editCodigo;
+    Button btnSalvar;
+    ListView listViewTurmas;
 
+    BancoDados db = new BancoDados(this);
 
-    cadastroTurmaDAO cadastroTurmaDAO;
+    ArrayAdapter<String> adapter;
+    ArrayList<String> arrayList;
+
+    InputMethodManager imp;
 
     /**
      * Pega os dados do Layout e atribui as variáveis
      * Valores das variáveis serão gardados no banco de Dados
-     * Instancia o Botão btSalvar do Layout
+     * Instancia o Botão btnSalvar do Layout
      * Grava os dados No Banco de Dados
      * @param savedInstanceState
      */
@@ -33,90 +45,86 @@ public class cadastrarTurma extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_turma);
 
-        cadastroTurmaDAO = new cadastroTurmaDAO(this);
+        editCodigo = (EditText) findViewById(R.id.editCodigo);
+        editTurma = (EditText) findViewById(R.id.editTurma);
+        editHorario = (EditText) findViewById(R.id.editHorario);
+        editDia = (EditText) findViewById(R.id.editDia);
+        editChave = (EditText) findViewById(R.id.editChave);
+        editLocal = (EditText) findViewById(R.id.editLocal);
 
-        nomeTurma = (EditText) findViewById(R.id.nomeTurma);
-        diaAulas = (EditText) findViewById(R.id.diaAulas);
-        horarioAulas = (EditText) findViewById(R.id.horarioAulas);
-        chaveAcesso = (EditText) findViewById(R.id.chaveAcesso);
-        local = (EditText) findViewById(R.id.local);
+        btnSalvar = (Button) findViewById(R.id.btnSalvar);
+        imp = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
 
-        Button btSalvar = (Button) findViewById(R.id.btSalvar);
+        listViewTurmas = (ListView) findViewById(R.id.listViewTurmas);
+        listarTurmas();
 
-        btSalvar.setOnClickListener(new View.OnClickListener(){
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-            public void onClick(View v){
+                String codigo = editCodigo.getText().toString();
+                String turma = editTurma.getText().toString();
+                String horario = editHorario.getText().toString();
+                String dia = editDia.getText().toString();
+                String chave = editChave.getText().toString();
+                String local = editLocal.getText().toString();
 
-                /**
-                 * Variáveis para inserção de dados
-                 */
-                String nomeTurma = "";
-                String diaAulas = "";
-                String horarioAulas = "";
-                String chaveAcesso = "";
-                String local = "";
+                if (turma.isEmpty()){
+                    editTurma.setError("Esse campos é Obrigatório");
+                } else if (horario.isEmpty()){
+                    editHorario.setError("Esse campos é Obrigatório");
+                } else if (dia.isEmpty()){
+                    editDia.setError("Esse campos é Obrigatório");
+                } else if (chave.isEmpty()){
+                    editChave.setError("Esse campos é Obrigatório");
+                } else if (local.isEmpty()){
+                    editLocal.setError("Esse campos é Obrigatório");
+                } else if  (codigo.isEmpty()){
+                    db.addTurma(new Turma(turma, horario, dia, chave, local));
+                    Toast.makeText(cadastrarTurma.this, "Cliente Adicionado com sucesso", Toast.LENGTH_LONG).show();
 
-                nomeTurma = nomeTurma.getBytes().toString();
-                diaAulas = diaAulas.getBytes().toString();
-                horarioAulas = horarioAulas.getBytes().toString();
-                chaveAcesso = chaveAcesso.getBytes().toString();
-                local = local.getBytes().toString();
+                    limpaCampos();
+                    listarTurmas();
+                    ocultaTeclado();
 
-                /**
-                 * Cria Nova Turma
-                 * Passa os Parametros para inserir os dados no banco de Dados
-                 */
-                cadastroTurmaBase cadastroTurmaBase = new cadastroTurmaBase(nomeTurma, diaAulas, horarioAulas, chaveAcesso, local);
-
-                /**
-                 * Abre uma nova Conexão
-                 * No banco de Dados
-                 */
-                cadastroTurmaDAO.open();
-
-                /**
-                 * Insere os dados
-                 * E salva a Turma cadastrada
-                 */
-                cadastroTurmaDAO.novoCadastro(cadastroTurmaBase);
-
-                /**
-                 * Fecha a conexão com o banco de dados
-                 */
-                cadastroTurmaDAO.close();
-
-                /**
-                 * chama o metodo limpar
-                 * Para limpar os campos preenchidos e já salvos
-                 */
-                limparCampos();
+                }
             }
         });
     }
 
-    /**
-     * Metodo Responsável por Limpar os campos após uma inserção de dadaos
-     * Limpa os campos se a operação de gravação for efetivada no banco de dados
-     */
-    private void limparCampos(){
-        nomeTurma.setText("");
-        diaAulas.setText("");
-        horarioAulas.setText("");
-        chaveAcesso.setText("");
-        local.setText("");
+    public void listarTurmas(){
+
+        List<Turma> turmas = db.listaTodasTurmas();
+
+        arrayList = new ArrayList<String>();
+
+        adapter = new ArrayAdapter<String>(cadastrarTurma.this, android.R.layout.simple_list_item_1, arrayList);
+
+        listViewTurmas.setAdapter(adapter);
+
+        for (Turma c : turmas){
+            //Log.d("Lista", "\nID: " + c.getCodigo() + " Nome :" + c.getNome());
+            arrayList.add(c.getCodigo() + "-" + c.getTurma());
+            adapter.notifyDataSetChanged();
+        }
     }
 
-    /**
-     * Faz com que o Botão "Voltar" em Cadastro Turma redirecione para a tela Inicial
-     * Metado chama outra Activity e faz a mudança de tela
-     * @param view
-     */
-    public void telaInicial(View view){
+    void ocultaTeclado(){
 
-        Intent intent1 = new Intent(getApplicationContext(), listagemTurmas.class);
-        startActivity(intent1);
+        imp.hideSoftInputFromWindow(editTurma.getWindowToken(), 0);
     }
 
+    void limpaCampos(){
+
+        editCodigo.setText("");
+        editTurma.setText("");
+        editDia.setText("");
+        editHorario.setText("");
+        editLocal.setText("");
+        editChave.setText("");
+
+        editTurma.requestFocus();
+    }
     /**
      *Inicia a aplicação se a mesma já foi criada
      */

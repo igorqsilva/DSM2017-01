@@ -1,110 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.iam.here.hereiam.cadastrarTurma">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="Cadastro de Turma"
-        android:textSize="25sp"
-        android:layout_gravity="center|top"/>
-
-    <TextView
-        android:id="@+id/textView1"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:text="Nome da Turma"/>
+        android:layout_height="match_parent"
+        tools:context="com.iam.here.hereiam.cadastroTurma">
 
-    <EditText
-        android:id="@+id/nomeTurma"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="64dp"
-        android:inputType="textCapWords"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Turma"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="Dias de Aulas" />
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="0dp"
+            android:weightSum="1">
 
-    <EditText
-        android:id="@+id/diaAulas"
-        android:layout_width="match_parent"
-        android:layout_height="42dp"
-        android:layout_marginTop="121dp"
-        android:inputType="date" />
+            <EditText
+                android:id="@+id/editCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:hint="Codigo"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:inputType="textPersonName"
+                android:enabled="false"
+                android:visibility="invisible" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="163dp"
-        android:text="Horario de Aulas"/>
+            <EditText
+                android:id="@+id/editTurma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:ems="10"
+                android:hint="Nome da Turma"
+                android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/horarioAulas"
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:layout_marginTop="180dp"
-        android:inputType="datetime" />
+            <EditText
+                android:id="@+id/editHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Horarios de Aulas"
+                android:inputType="time"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="221dp"
-        android:text="Chave de Acesso"/>
+            <EditText
+                android:id="@+id/editDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Dias de Aulas"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
 
-    <EditText
-        android:id="@+id/chaveAcesso"
-        android:layout_width="match_parent"
-        android:layout_height="43dp"
-        android:layout_marginTop="238dp"
-        android:inputType="textVisiblePassword"/>
+            <EditText
+                android:id="@+id/editChave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Chave de Acesso"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="281dp"
-        android:text="Local"/>
+            <EditText
+                android:id="@+id/editLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Local"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"/>
 
-    <EditText
-        android:id="@+id/local"
-        android:layout_width="match_parent"
-        android:layout_height="38dp"
-        android:layout_marginTop="298dp"
-        android:inputType="textCapWords"/>
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Cadastrar"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="70dp"
+                android:layout_marginRight="70dp"/>
 
-    <Button
-        android:id="@+id/btSalvar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|left"
-        android:layout_marginBottom="50sp"
-        android:layout_marginLeft="15sp"
-        android:onClick="cadastrar"
-        android:text="Cadastrar"/>
+            <ListView
+                android:id="@+id/listViewTurmas"
+                android:layout_width="match_parent"
+                android:layout_height="195dp"
+                android:layout_weight="2.34"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"/>
 
-    <Button
-        android:id="@+id/btTurmas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="50sp"
-        android:layout_marginRight="15sp"
-        android:onClick="telaInicial"
-        android:text="Turmas Cadastradas" />
-
-</FrameLayout>
+        </LinearLayout>
+        <!-- xmlns:app="http://schemas.android.com/apk/res-auto" -->
+    </RelativeLayout>
+</ScrollView>

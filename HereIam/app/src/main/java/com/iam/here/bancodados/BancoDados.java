@@ -52,7 +52,7 @@ public class BancoDados extends SQLiteOpenHelper {
 
     }
 
-    void addTurma(Turma turma){
+    public void addTurma(Turma turma){
 
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -67,7 +67,7 @@ public class BancoDados extends SQLiteOpenHelper {
         db.close();
     }
 
-    void apagarTurma(Turma turma){
+    public void apagarTurma(Turma turma){
         SQLiteDatabase db = this.getWritableDatabase();
 
         db.delete(TABELA_TURMA, COLUNA_CODIGO + " = ?", new String[] { String.valueOf(turma.getCodigo())});
@@ -92,7 +92,7 @@ public class BancoDados extends SQLiteOpenHelper {
         return turma;
     }
 
-    void atualizaTurma(Turma turma){
+    public void atualizaTurma(Turma turma){
 
         SQLiteDatabase db = this.getWritableDatabase();
 

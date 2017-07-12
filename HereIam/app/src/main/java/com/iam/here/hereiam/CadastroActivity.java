@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class cadastroActivity extends AppCompatActivity {
@@ -197,12 +198,12 @@ public class cadastroActivity extends AppCompatActivity {
                     EditText Matricula = (EditText) findViewById(R.id.email);
                     EditText Email = (EditText) findViewById(R.id.matricula);
                     EditText Senha = (EditText) findViewById(R.id.senha);
-                    EditText Perfil = (EditText) findViewById(R.id.perfil);
+                    RadioGroup Perfil = (RadioGroup) findViewById(R.id.perfil);
                     String nomeString = Nome.getText().toString();
                     String matriculaString = Matricula.getText().toString();
                     String emailString = Email.getText().toString();
                     String senhaString = Senha.getText().toString();
-                    String perfilString = Perfil.getText().toString();
+                    String perfilString = Perfil.toString();
                     String resultado;
 
                     resultado = crud.insereDado(nomeString, matriculaString, emailString, senhaString, perfilString);

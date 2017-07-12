@@ -1,75 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.iam.here.hereiam.professor">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_margin="10sp"
+        android:text="Professor"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Minhas Turmas"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.iam.here.hereiam.cadastroTurma">
+        android:layout_margin="50sp"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <TextView
-            android:id="@+id/textView"
+        <ListView
+            android:id="@+id/listViewTurmas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Professor"
-            android:textSize="22sp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="1px"/>
+            android:layout_weight="0.09" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Minhas Turmas"
-            android:textSize="18dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="16dp" />
+        <Button
+            android:id="@+id/btnEditar"
+            android:layout_width="135sp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:onClick="editarCadastroTurma"
+            android:text="Editar Turmas Cadastrar" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:weightSum="1">
+    </LinearLayout>
+    <!-- xmlns:app="http://schemas.android.com/apk/res-auto" -->
 
-            <ListView
-                android:id="@+id/listViewTurmas"
-                android:layout_width="wrap_content"
-                android:layout_height="195dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="70dp"
-                android:layout_weight="0.09" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|end"
+        android:layout_margin="10sp"
+        android:clickable="true"
+        android:onClick="CadastrarTurma"
+        app:backgroundTint="@color/colorAccent"
+        app:srcCompat="@drawable/btn_plus" />
 
-            <Button
-                android:id="@+id/btnEditar"
-                android:layout_width="135sp"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="16dp"
-                android:onClick="editarCadastroTurma"
-                android:text="Editar Turmas Cadastrar" />
-
-            <android.support.design.widget.FloatingActionButton
-                android:id="@+id/floatingActionButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignTop="@+id/linearLayout1"
-                android:clickable="true"
-                app:fabSize="mini"
-                app:srcCompat="@drawable/btn_plus"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="250dp"
-                android:onClick="CadastrarTurma"/>
-
-        </LinearLayout>
-        <!-- xmlns:app="http://schemas.android.com/apk/res-auto" -->
-    </RelativeLayout>
-</ScrollView>
+</FrameLayout>

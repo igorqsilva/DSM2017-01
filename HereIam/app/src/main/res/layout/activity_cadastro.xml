@@ -59,12 +59,14 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:textSize="17sp"
                 android:layout_marginRight="30sp"
                 android:text="Professor" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:textSize="17sp"
                 android:layout_marginLeft="30sp"
                 android:text="Aluno" />
 

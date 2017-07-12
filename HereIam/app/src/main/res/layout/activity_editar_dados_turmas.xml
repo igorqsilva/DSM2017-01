@@ -80,15 +80,26 @@ android:layout_height="match_parent">
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"/>
 
-        <EditText
-            android:id="@+id/editLocal"
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Local"
-            android:inputType="textPersonName"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"/>
+            android:orientation="horizontal"
+            android:id="@+id/localAulaEdit"
+            android:layout_gravity="center">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="INF"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:text="CAB"/>
+
+        </RadioGroup>
 
         <LinearLayout
             android:layout_width="match_parent"

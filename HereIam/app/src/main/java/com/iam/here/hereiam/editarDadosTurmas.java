@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.iam.here.bancodados.BancoDados;
@@ -26,7 +27,8 @@ public class editarDadosTurmas extends AppCompatActivity {
     /**
      * Declara as variáveis para bOtões e editTexs
      */
-    EditText editTurma, editHorario,  editDia, editChave, editLocal, editCodigo;
+    EditText editTurma, editHorario,  editDia, editChave, editCodigo;
+    RadioGroup editLocal;
     Button btnLimpar, btnSalvar, btnExcluir;
     ListView listViewTurmas;
 
@@ -63,7 +65,7 @@ public class editarDadosTurmas extends AppCompatActivity {
         editHorario = (EditText) findViewById(R.id.editHorario);
         editDia = (EditText) findViewById(R.id.editDia);
         editChave = (EditText) findViewById(R.id.editChave);
-        editLocal = (EditText) findViewById(R.id.editLocal);
+        editLocal = (RadioGroup) findViewById(R.id.localAulaEdit);
 
         btnLimpar = (Button)findViewById(R.id.btnLimpar);
         btnSalvar = (Button)findViewById(R.id.btnSalvar);
@@ -102,7 +104,7 @@ public class editarDadosTurmas extends AppCompatActivity {
                 editHorario.setText(turma.getHorario());
                 editDia.setText(turma.getDia());
                 editChave.setText(turma.getChave());
-                editLocal.setText(turma.getLocal());
+                editLocal.clearCheck();
             }
         });
 
@@ -122,7 +124,7 @@ public class editarDadosTurmas extends AppCompatActivity {
                 String horario = editHorario.getText().toString();
                 String dia = editDia.getText().toString();
                 String chave = editChave.getText().toString();
-                String local = editLocal.getText().toString();
+                String local = editLocal.toString();
 
                 if (turma.isEmpty()){
                     editTurma.setError("Esse campos é Obrigatório");
@@ -133,7 +135,7 @@ public class editarDadosTurmas extends AppCompatActivity {
                 } else if (chave.isEmpty()){
                     editChave.setError("Esse campos é Obrigatório");
                 } else if (local.isEmpty()){
-                    editLocal.setError("Esse campos é Obrigatório");
+                    editLocal.clearCheck();
                 } else if  (codigo.isEmpty()){
                     db.addTurma(new Turma(turma, horario, dia, chave, local));
                     Toast.makeText(editarDadosTurmas.this, "Tuma adicionada com sucesso", Toast.LENGTH_LONG).show();
@@ -220,7 +222,7 @@ public class editarDadosTurmas extends AppCompatActivity {
         editTurma.setText("");
         editDia.setText("");
         editHorario.setText("");
-        editLocal.setText("");
+        editLocal.clearCheck();
         editChave.setText("");
 
         editTurma.requestFocus();

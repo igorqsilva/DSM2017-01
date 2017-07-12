@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.iam.here.bancodados.*;
@@ -25,7 +26,8 @@ public class cadastrarTurma extends Activity {
     /**
      * Variáveis para cadastro de uma nova turma
      */
-    EditText editTurma, editHorario,  editDia, editChave, editLocal, editCodigo;
+    EditText editTurma, editHorario,  editDia, editChave, editCodigo;
+    RadioGroup editLocal;
     Button btnSalvar;
     ListView listViewTurmas;
 
@@ -53,7 +55,7 @@ public class cadastrarTurma extends Activity {
         editHorario = (EditText) findViewById(R.id.editHorario);
         editDia = (EditText) findViewById(R.id.editDia);
         editChave = (EditText) findViewById(R.id.editChave);
-        editLocal = (EditText) findViewById(R.id.editLocal);
+        editLocal = (RadioGroup) findViewById(R.id.localAula);
 
         btnSalvar = (Button) findViewById(R.id.btnSalvar);
         imp = (InputMethodManager) this.getSystemService(Service.INPUT_METHOD_SERVICE);
@@ -77,18 +79,18 @@ public class cadastrarTurma extends Activity {
                 String horario = editHorario.getText().toString();
                 String dia = editDia.getText().toString();
                 String chave = editChave.getText().toString();
-                String local = editLocal.getText().toString();
+                String local = editLocal.toString();
 
                 if (turma.isEmpty()){
-                    editTurma.setError("Esse campos é Obrigatório");
+                    editTurma.setError("Esse campo é Obrigatório");
                 } else if (horario.isEmpty()){
-                    editHorario.setError("Esse campos é Obrigatório");
+                    editHorario.setError("Esse campo é Obrigatório");
                 } else if (dia.isEmpty()){
-                    editDia.setError("Esse campos é Obrigatório");
+                    editDia.setError("Esse campo é Obrigatório");
                 } else if (chave.isEmpty()){
-                    editChave.setError("Esse campos é Obrigatório");
+                    editChave.setError("Esse campo é Obrigatório");
                 } else if (local.isEmpty()){
-                    editLocal.setError("Esse campos é Obrigatório");
+                    editLocal.clearCheck();
                 } else if  (codigo.isEmpty()){
                     db.addTurma(new Turma(turma, horario, dia, chave, local));
                     Toast.makeText(cadastrarTurma.this, "Cliente Adicionado com sucesso", Toast.LENGTH_LONG).show();
@@ -142,7 +144,7 @@ public class cadastrarTurma extends Activity {
         editTurma.setText("");
         editDia.setText("");
         editHorario.setText("");
-        editLocal.setText("");
+        editLocal.clearCheck();
         editChave.setText("");
 
         editTurma.requestFocus();

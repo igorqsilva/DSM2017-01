@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.iam.here.hereiam.cadastroAlunoTurma">
 
-    <TextView
-        android:id="@+id/cadastroEmTurma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10sp"
-        android:layout_weight="1"
-        android:text="Encontre sua turma:"
-        android:textSize="25sp"/>
-
-    <SearchView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50sp"
-        android:layout_marginTop="30sp"
-        android:clickable="true"
-        android:textAlignment="center">
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:orientation="horizontal">
 
-    </SearchView>
+        <TextView
+            android:id="@+id/cadastroEmTurma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10sp"
+            android:text="Encontre sua turma:"
+            android:textSize="20sp" />
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:textAlignment="center">
+
+        </SearchView>
+
+    </LinearLayout>
 
     <ListView
-        android:id="@android:id/list"
-        android:layout_marginTop="85sp"
+        android:id="@+id/listCadastroAluno"
+        android:layout_margin="30sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </ListView>
-</FrameLayout>
+</LinearLayout>

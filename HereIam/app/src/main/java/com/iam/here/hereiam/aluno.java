@@ -4,6 +4,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import com.iam.here.bancodados.BancoDados;
+import com.iam.here.bancodados.Turma;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Classe do Perfil de Aluno
@@ -18,6 +26,7 @@ public class aluno extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aluno);
+
     }
 
     /**
@@ -31,6 +40,7 @@ public class aluno extends AppCompatActivity {
         startActivity(cadastroAlunoTurma);
 
     }
+
 
     /**
      *Inicia a aplicação se a mesma já foi criada

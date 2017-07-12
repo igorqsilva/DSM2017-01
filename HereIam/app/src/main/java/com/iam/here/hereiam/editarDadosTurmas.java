@@ -18,14 +18,26 @@ import com.iam.here.bancodados.Turma;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * EDita cadastro de uma turma existente e também salva uma nova
+ */
 public class editarDadosTurmas extends AppCompatActivity {
 
+    /**
+     * Declara as variáveis para bOtões e editTexs
+     */
     EditText editTurma, editHorario,  editDia, editChave, editLocal, editCodigo;
     Button btnLimpar, btnSalvar, btnExcluir;
     ListView listViewTurmas;
 
+    /**
+     * banco de Dados
+     */
     BancoDados db = new BancoDados(this);
 
+    /**
+     * Declara uma lista para mostrar a lista de turmas
+     */
     ArrayAdapter<String> adapter;
     ArrayList<String> arrayList;
 
@@ -43,6 +55,9 @@ public class editarDadosTurmas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editar_dados_turmas);
 
+        /**
+         * Relaciona os Botões e EditTexts
+         */
         editCodigo = (EditText) findViewById(R.id.editCodigo);
         editTurma = (EditText) findViewById(R.id.editTurma);
         editHorario = (EditText) findViewById(R.id.editHorario);
@@ -68,6 +83,9 @@ public class editarDadosTurmas extends AppCompatActivity {
             }
         });
 
+        /**
+         * Permite que uma turma seja selecionada para exclusão, alteração
+         */
         listViewTurmas.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
@@ -88,6 +106,13 @@ public class editarDadosTurmas extends AppCompatActivity {
             }
         });
 
+        /**
+         * Cadastra Uma turma na conta do professor
+         * Verifica se os campos estão em branco
+         * Verifica a turma já existe
+         * Chama os metodos de limpar campo
+         * atualiza a lista de turmas
+         */
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,6 +154,11 @@ public class editarDadosTurmas extends AppCompatActivity {
             }
         });
 
+        /**
+         * Exclui uma turma
+         * Verifica se a turma foi selecionada
+         * verifica se a turma já existe ou não
+         */
         btnExcluir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,7 +180,9 @@ public class editarDadosTurmas extends AppCompatActivity {
             }
         });
     }
-
+    /**
+     * Cria e mostra A listagem de Turmas
+     */
     public void listarTurmas(){
 
         List<Turma> turmas = db.listaTodasTurmas();
@@ -167,11 +199,20 @@ public class editarDadosTurmas extends AppCompatActivity {
         }
     }
 
+    /**
+     * Oculta o teclado quando o metodo é chamado
+     */
     void ocultaTeclado(){
 
         imp.hideSoftInputFromWindow(editTurma.getWindowToken(), 0);
     }
 
+    /**
+     * limpa os campos quando for solicitado
+     * Quando o metodo é chamado
+     * Após finalizar um cadastro
+     * Após finalizar uma alteração ou exclusão
+     */
     void limpaCampos(){
 
         editCodigo.setText("");

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.iam.here.hereiam.editarDadosTurmasa">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar dados  de Turmas"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="0dp"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:hint="Codigo"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/editTurma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:hint="Nome da Turma"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Horarios de Aulas"
+            android:inputType="time"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/editDia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Dias de Aulas"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/editChave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Chave de Acesso"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/editLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Local"
+            android:inputType="textPersonName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpar"
+                android:layout_weight="0.71" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Salvar" />
+
+            <Button
+                android:id="@+id/btnExcluir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Excluir" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewTurmas"
+            android:layout_width="match_parent"
+            android:layout_height="215dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp" />
+
+    </LinearLayout>
+    <!-- xmlns:app="http://schemas.android.com/apk/res-auto" -->
+</RelativeLayout>
+</ScrollView>

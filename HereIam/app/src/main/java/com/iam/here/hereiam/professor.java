@@ -36,6 +36,12 @@ public class professor extends AppCompatActivity {
         startActivity(intent2);
     }
 
+    public void editarCadastroTurma(View view){
+
+        Intent intent3 = new Intent(getApplicationContext(), editarDadosTurmas.class);
+        startActivity(intent3);
+    }
+
 
     /**
      *Inicia a aplicação se a mesma já foi criada

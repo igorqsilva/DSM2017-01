@@ -10,28 +10,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Professor"
-        android:textSize="25sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.029"
-        app:layout_constraintHorizontal_bias="0.501" />
-
-    <Button
-        android:id="@+id/btCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_column="0"
-        android:layout_row="9"
-        android:onClick="telaCadastroTurma"
-        android:text="Cadastrar Turma"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.004" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -47,5 +31,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.966"
         app:layout_constraintHorizontal_bias="0.953" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="180dp"
+        android:layout_height="51dp"
+        android:text="Editar Turmas"
+        android:onClick="editarCadastroTurma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <ListView
+        android:id="@+id/listViewTurmas"
+        android:layout_width="278dp"
+        android:layout_height="285dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.296" />
 
 </android.support.constraint.ConstraintLayout>

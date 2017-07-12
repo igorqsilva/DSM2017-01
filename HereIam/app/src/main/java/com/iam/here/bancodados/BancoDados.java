@@ -75,7 +75,7 @@ public class BancoDados extends SQLiteOpenHelper {
         db.close();
     }
 
-    Turma selecionarTurma(int codigo){
+    public Turma selecionarTurma(int codigo){
         SQLiteDatabase db = this.getReadableDatabase();
 
         Cursor cursor = db.query(TABELA_TURMA, new String[]{COLUNA_CODIGO,

@@ -67,12 +67,33 @@
                 android:hint="Chave de Acesso"
                 android:inputType="textPersonName"/>
 
-            <EditText
-                android:id="@+id/editLocal"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:hint="Local"
-                android:inputType="textPersonName"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:text="Local: "/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/localAula"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="INF"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="CAB"/>
+
+            </RadioGroup>
 
             <Button
                 android:id="@+id/btnSalvar"

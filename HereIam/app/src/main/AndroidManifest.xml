@@ -40,9 +40,9 @@
         <activity android:name=".cadastroAlunoTurma" />
         <activity android:name=".loginActivity" />
         <activity android:name=".professor" />
-<<<<<<< HEAD
-        <activity android:name=".editarDadosTurmas"></activity>
-=======
+        <activity android:name=".editarDadosTurmas"/>
+        <activity android:name=".MapsActivity" android:label="@string/title_activity_maps"/>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -54,11 +54,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
->>>>>>> VisualApp
     </application>
 
 </manifest>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,62 +10,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Professor"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="20sp"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="150dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minhas Turmas"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.077"
-        app:layout_constraintHorizontal_bias="0.203" />
+        android:text="Minhas Turmas:"
+        android:textSize="16dp"
+        android:layout_margin="35dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
         android:clickable="true"
         android:onClick="CadastrarTurma"
-        app:fabSize="mini"
-        app:srcCompat="@drawable/btn_plus"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.966"
-        app:layout_constraintHorizontal_bias="0.953" />
+        app:backgroundTint="@color/colorAccent"
+        app:srcCompat="@drawable/btn_plus" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="180dp"
         android:layout_height="51dp"
-        android:text="Editar Turmas"
         android:onClick="editarCadastroTurma"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.813" />
+        android:text="Editar Turmas"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginTop="400dp"/>
 
     <ListView
         android:id="@+id/listViewTurmas"
-        android:layout_width="278dp"
-        android:layout_height="285dp"
+        android:layout_width="wrap_content"
+        android:layout_height="323dp"
+        android:layout_marginTop="60dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.296" />
+        android:layout_marginRight="16dp"/>
 
-</android.support.constraint.ConstraintLayout>
+</FrameLayout>

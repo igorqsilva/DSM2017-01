@@ -42,11 +42,10 @@
         <Button
             android:id="@+id/btnEditar"
             android:layout_width="135sp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
             android:onClick="editarCadastroTurma"
-            android:text="Editar Turmas Cadastrar" />
+            android:text="Editar Turmas Cadastradas" />
 
     </LinearLayout>
     <!-- xmlns:app="http://schemas.android.com/apk/res-auto" -->

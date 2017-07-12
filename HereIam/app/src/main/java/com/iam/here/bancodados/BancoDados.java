@@ -13,6 +13,9 @@ import java.util.List;
  * Created by eliezer on 09/07/2017.
  */
 
+/**
+ * Cria O Banco de Dados
+ */
 public class BancoDados extends SQLiteOpenHelper {
 
     private static final int VERSAO_BANCO = 1;
@@ -33,6 +36,10 @@ public class BancoDados extends SQLiteOpenHelper {
         super(context, BANCO_TURMA, null, VERSAO_BANCO);
     }
 
+    /**
+     * Cria a tabela de Turmas
+     * @param db
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
 
@@ -47,11 +54,21 @@ public class BancoDados extends SQLiteOpenHelper {
         db.execSQL(QUERY_COLUNA);
     }
 
+    /**
+     * Atualiza o BD
+     * @param db
+     * @param i
+     * @param i1
+     */
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
     }
 
+    /**
+     * Adiciona uma Turma
+     * @param turma
+     */
     public void addTurma(Turma turma){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -67,6 +84,10 @@ public class BancoDados extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Deleta uma turma se ela existir
+     * @param turma
+     */
     public void apagarTurma(Turma turma){
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -75,6 +96,11 @@ public class BancoDados extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Seleciona uma turma para fazer operações de atualização e exclusão
+     * @param codigo
+     * @return
+     */
     public Turma selecionarTurma(int codigo){
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -92,6 +118,10 @@ public class BancoDados extends SQLiteOpenHelper {
         return turma;
     }
 
+    /**
+     * Atualiza os dados de uma Turma se ela existir
+     * @param turma
+     */
     public void atualizaTurma(Turma turma){
 
         SQLiteDatabase db = this.getWritableDatabase();
@@ -107,6 +137,11 @@ public class BancoDados extends SQLiteOpenHelper {
                 new String[] { String.valueOf(turma.getCodigo()) });
     }
 
+    /**
+     * Exibe uma lista de turmas se ela existir
+     * Mostra Turmas cadastradas
+     * @return
+     */
     public List<Turma> listaTodasTurmas(){
 
         List<Turma> listaTurmas = new ArrayList<Turma>();

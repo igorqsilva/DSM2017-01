@@ -58,6 +58,13 @@ public class cadastrarTurma extends Activity {
         listViewTurmas = (ListView) findViewById(R.id.listViewTurmas);
         listarTurmas();
 
+        /**
+         * Cadastra Uma turma na conta do professor
+         * Verifica se os campos estão em branco
+         * Verifica a turma já existe
+         * Chama os metodos de limpar campo
+         * atualiza a lista de turmas
+         */
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +99,9 @@ public class cadastrarTurma extends Activity {
         });
     }
 
+    /**
+     * Cria e mostra A listagem de Turmas
+     */
     public void listarTurmas(){
 
         List<Turma> turmas = db.listaTodasTurmas();
@@ -109,11 +119,20 @@ public class cadastrarTurma extends Activity {
         }
     }
 
+    /**
+     * Oculta o teclado quando o metodo é chamado
+     */
     void ocultaTeclado(){
 
         imp.hideSoftInputFromWindow(editTurma.getWindowToken(), 0);
     }
 
+    /**
+     * limpa os campos quando for solicitado
+     * Quando o metodo é chamado
+     * Após finalizar um cadastro
+     * Após finalizar uma alteração ou exclusão
+     */
     void limpaCampos(){
 
         editCodigo.setText("");

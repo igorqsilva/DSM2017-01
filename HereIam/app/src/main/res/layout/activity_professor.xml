@@ -12,14 +12,16 @@
         android:text="Professor"
         android:textSize="20sp"
         android:layout_marginTop="1dp"
-        android:layout_marginStart="150dp"/>
+        android:layout_marginLeft="400px"/>
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Minhas Turmas:"
-        android:textSize="16dp"
-        android:layout_margin="35dp" />
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="16dp"
+        android:text="Turmas:"
+        android:textSize="20dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton2"
@@ -41,13 +43,13 @@
         android:text="Editar Turmas"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="90dp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="350dp"/>
 
     <ListView
         android:id="@+id/listViewTurmas"
         android:layout_width="wrap_content"
-        android:layout_height="323dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="70dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"/>
 

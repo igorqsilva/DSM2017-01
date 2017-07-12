@@ -38,6 +38,7 @@ public class professor extends AppCompatActivity {
         /**
          * Chama metodo para mostrar turmas cadastradas
          */
+        listViewTurmas = (ListView) findViewById(R.id.listViewTurmas);
         listarTurmas();
     }
 

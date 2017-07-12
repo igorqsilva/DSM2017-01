@@ -16,6 +16,15 @@ public class Turma {
 
     }
 
+    /**
+     * Contrutor de Turma
+     * @param _codigo
+     * @param _turma
+     * @param _horario
+     * @param _dia
+     * @param _chave
+     * @param _local
+     */
     public Turma(int _codigo, String _turma, String _horario, String _dia, String _chave, String _local){
         this.codigo = _codigo;
         this.turma = _turma;
@@ -25,6 +34,14 @@ public class Turma {
         this.local = _local;
     }
 
+    /**
+     * Construtor de Turma
+     * @param _turma
+     * @param _horario
+     * @param _dia
+     * @param _chave
+     * @param _local
+     */
     public Turma(String _turma, String _horario, String _dia, String _chave, String _local){
         this.turma = _turma;
         this.horario = _horario ;
@@ -35,6 +52,10 @@ public class Turma {
     //----------------------------------------------------------------------------------------------
 
 
+    /**
+     * Gets e Sets de Variáveis de Turma
+     * @return
+     */
     public int getCodigo() {
         return codigo;
     }

@@ -17,6 +17,9 @@ import com.iam.here.bancodados.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Cadastra Uma nova turma
+ */
 public class cadastrarTurma extends Activity {
 
     /**

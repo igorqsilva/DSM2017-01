@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void startLoginActivity(View view) {
 
-        Intent secondActivity = new Intent(this, loginActivity.class);
+        Intent secondActivity = new Intent(this, MapsActivity.class);
         startActivity(secondActivity);
     }
 

@@ -93,7 +93,7 @@ public class cadastrarTurma extends Activity {
                     editLocal.clearCheck();
                 } else if  (codigo.isEmpty()){
                     db.addTurma(new Turma(turma, horario, dia, chave, local));
-                    Toast.makeText(cadastrarTurma.this, "Cliente Adicionado com sucesso", Toast.LENGTH_LONG).show();
+                    Toast.makeText(cadastrarTurma.this, "Turma Adicionada com sucesso", Toast.LENGTH_LONG).show();
 
                     limpaCampos();
                     listarTurmas();

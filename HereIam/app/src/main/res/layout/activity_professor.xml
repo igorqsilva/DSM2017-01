@@ -36,8 +36,7 @@
         <ListView
             android:id="@+id/listViewTurmas"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.09" />
+            android:layout_height="357dp" />
 
         <Button
             android:id="@+id/btnEditar"
@@ -60,5 +59,6 @@
         android:onClick="CadastrarTurma"
         app:backgroundTint="@color/colorAccent"
         app:srcCompat="@drawable/btn_plus" />
+
 
 </FrameLayout>
